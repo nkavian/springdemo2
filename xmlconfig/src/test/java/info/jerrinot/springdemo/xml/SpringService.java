@@ -1,12 +1,9 @@
 package info.jerrinot.springdemo.xml;
 
-import org.springframework.stereotype.Service;
-
-@Service
 public class SpringService {
     private int magicValue;
 
-    public void setMagicValue(int magicValue) {
+    public SpringService(int magicValue) {
         this.magicValue = magicValue;
     }
 

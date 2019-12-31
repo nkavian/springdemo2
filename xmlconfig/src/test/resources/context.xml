@@ -30,7 +30,7 @@
     </hz:hazelcast>
 
     <bean id="my-service" class="info.jerrinot.springdemo.xml.SpringService">
-        <property name="magicValue" value="42"/>
+        <constructor-arg value="42"/>
     </bean>
 
     <bean id="executor-service" factory-bean="hazelcast" factory-method="getExecutorService">
