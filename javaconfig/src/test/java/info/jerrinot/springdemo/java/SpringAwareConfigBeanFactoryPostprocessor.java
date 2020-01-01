@@ -15,12 +15,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.core.ResolvableType;
 import org.springframework.core.annotation.MergedAnnotations;
 import org.springframework.core.type.MethodMetadata;
-import org.springframework.stereotype.Service;
 
 import java.lang.annotation.Annotation;
 
-@Service
-public class SpringAwareConfigBeanFactoryPostprocessor implements BeanDefinitionRegistryPostProcessor {
+class SpringAwareConfigBeanFactoryPostprocessor implements BeanDefinitionRegistryPostProcessor {
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
