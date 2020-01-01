@@ -19,6 +19,7 @@ import org.springframework.core.type.MethodMetadata;
 import java.lang.annotation.Annotation;
 
 class SpringAwareConfigBeanFactoryPostprocessor implements BeanDefinitionRegistryPostProcessor {
+    private static final String POSTPROCESSOR_BEAN_NAME_SUFFIX = "-springaware-postprocessor";
 
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
@@ -81,6 +82,6 @@ class SpringAwareConfigBeanFactoryPostprocessor implements BeanDefinitionRegistr
     }
 
     private static String createPostProcessorBeanName(String beanName) {
-        return beanName + "-springaware-postprocessor";
+        return beanName + POSTPROCESSOR_BEAN_NAME_SUFFIX;
     }
 }
