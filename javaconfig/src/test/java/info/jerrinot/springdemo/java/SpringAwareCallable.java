@@ -14,6 +14,6 @@ public class SpringAwareCallable implements Callable<Integer>, Serializable {
 
     @Override
     public Integer call() {
-        return springService.getMagicValue();
+        return springService == null ? null : springService.getMagicValue();
     }
 }
