@@ -26,12 +26,12 @@ public class SpringdemoApplication {
     }
 
 // UNCOMMENT THIS TO GET THE SPRING MANAGED CONTEXT INJECTED INTO HAZELCAST
-//    @Bean
-//    public Config createConfigWithSpringManagedContext(ApplicationContext context) {
-//        Config config =  new Config();
-//        SpringManagedContext springManagedContext = new SpringManagedContext();
-//        springManagedContext.setApplicationContext(context);
-//        config.setManagedContext(springManagedContext);
-//        return config;
-//    }
+   @Bean
+   public Config createConfigWithSpringManagedContext(ApplicationContext context) {
+       Config config =  new Config();
+       SpringManagedContext springManagedContext = new SpringManagedContext();
+       springManagedContext.setApplicationContext(context);
+       config.setManagedContext(springManagedContext);
+       return config;
+   }
 }

@@ -1,2 +1,25 @@
 hazelcast:
   cluster-name: foobar-yaml
+  map:
+    aMap:
+      in-memory-format: BINARY
+      per-entry-stats-enabled: true
+      cache-deserialized-values: INDEX-ONLY
+      backup-count: 0
+      async-backup-count: 0
+      time-to-live-seconds: 7200
+      max-idle-seconds: 3600
+      eviction:
+        eviction-policy: LRU
+        max-size-policy: FREE_HEAP_PERCENTAGE
+        size: 25
+      merge-policy:
+        class-name: LatestUpdateMergePolicy
+      read-backup-data: false
+      map-store:
+        enabled: true
+        initial-mode: LAZY
+        class-name: info.jerrinot.springdemo.java.SpringStore
+        write-delay-seconds: 0
+        write-batch-size: 1000
+        write-coalescing: false
